@@ -11,7 +11,7 @@ The pipeline will run through the following steps on fastq files of the data:
 6. Extracting the longest contig generated in the output from SPAdes, creating a local database of sequences from the Betaherpesvirinae subfamily, and running blastn of the longest contig with the local database. 
 
 ## Running the wrapper code for the pipeline. 
-You need to cd to PipelineProject_Matthew_Fischer then run the following code:
+You need to cd to PipelineProject_Matthew_Fischer then run the following code: \n
 python wrapper.py
 
 This will run the sample data included in the github and output information from each step into PipelineProject.log. If you want to run the full sample data, follow the below information under Retrieving Files (Step 1). 
@@ -23,7 +23,7 @@ Included in the github code is two other PipelineProject log files:
 ## Retrieving Files (Step 1):
 From the given websites, I went to the respective SRR link towards the bottom, clicked Data access tab, then used wget on the SRA Normalized link. Commands are as follows (ran in sequences folder):
 
-#Donor 1 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896360
+#Donor 1 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896360 \n
 wget https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660030/SRR5660030
 
 #Donor 1 (6dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896363
