@@ -6,7 +6,7 @@ The pipeline will run through the following steps on fastq files of the data:
 2. Running kallisto on each sample (donor 1 and 3) and condition (2dpi and 6dpi) to quantify the TPM of each CDS.
 3. Using the outputs from kallisto to run the R package sleuth to determine the differentially expressed genes between the two timepoints (2dpi and 6dpi), then filter the information for significant transcripts (FDR < 0.05)
 4. Using Bowtie2, create a genome index for HCMV. Run bowtie2 on each sample and condition sequence pairs and save only the reads that map to the HCMB index. 
-- The genome index is already included in the github, but if you would like to run, the code is commented in ./step5_bowtie2/bowtie.sh
+  - The genome index is already included in the github, but if you would like to run, the code is commented in ./step5_bowtie2/bowtie.sh
 5. Using the output from step 4, run SPAdes to generate two assemblies, one from each sample (donor 1 and 3), using a kmer size of 77.
 6. Extracting the longest contig generated in the output from SPAdes, creating a local database of sequences from the Betaherpesvirinae subfamily, and running blastn of the longest contig with the local database. 
 
@@ -51,12 +51,12 @@ SRA-Toolkit: https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump
 SPAdes: https://github.com/ablab/spades
 Bowtie2: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
-# Python Dependencies:
+## Python Dependencies:
 Biopython: https://biopython.org/
 Numpy (import numpy as np)
 os (import os)
 
-# R Libraries:
+## R Libraries:
 sleuth
 data.table
 dpylr
